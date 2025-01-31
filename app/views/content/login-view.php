@@ -29,7 +29,7 @@
 
             <!-- Enlace "¿No tienes cuenta?" -->
             <div class="field has-text-centered">
-                <a href="#" class="is-size-7">¿No tienes cuenta? Regístrate aquí</a>
+                <a href="./singUp-view.php" class="is-size-7">¿No tienes cuenta? Regístrate aquí</a>
             </div>
 
             <!-- Botón de envío -->

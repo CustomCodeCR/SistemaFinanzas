@@ -69,7 +69,7 @@
 
             <!-- Enlace "¿Ya tienes cuenta?" -->
             <div class="field has-text-centered">
-                <a href="#" class="is-size-7">¿Ya tienes cuenta?</a>
+                <a href="./login-view.php" class="is-size-7">¿Ya tienes cuenta?</a>
             </div>
 
             <!-- Botón de envío -->
