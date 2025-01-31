@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" src="style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="forms-container">
     <div class="sing-up-container">
