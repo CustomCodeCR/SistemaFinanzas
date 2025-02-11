@@ -8,22 +8,28 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="forms-container">
-    <div class="sing-up-container">
+<div class="sign-up-container">
         <h1 class="title has-text-centered">Iniciar Sesión</h1>
         <form action="#" method="POST">
             <!-- Nombre de usuario o correo electrónico -->
             <div class="field">
                 <label class="label">Correo electrónico</label>
-                <div class="control">
-                    <input class="input" type="text" name="username_or_email" placeholder="aaa@example.com" required>
+                <div class="control has-icons-left">
+                    <input class="input" type="email" name="username_or_email" placeholder="aaa@example.com" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
                 </div>
             </div>
 
             <!-- Contraseña -->
             <div class="field">
                 <label class="label">Contraseña</label>
-                <div class="control">
+                <div class="control has-icons-left">
                     <input class="input" type="password" name="password" placeholder="Ingresa tu contraseña" required>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
                 </div>
             </div>
 

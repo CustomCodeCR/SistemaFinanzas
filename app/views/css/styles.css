@@ -1,17 +1,66 @@
-body,
-html {
-    height: 100%;
-    width: 100%;
-}
-.forms-container {
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
 }
-.sing-up-container {
-    width: 100%;
+
+.sign-up-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    padding: 20px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    color: #333;
+    font-weight: 700;
+}
+
+.input {
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+}
+
+.button {
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: #5a67d8;
+}
+
+.has-text-centered a {
+    color: #5a67d8;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.has-text-centered a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
