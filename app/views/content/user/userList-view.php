@@ -5,6 +5,20 @@ include 'config.php';
 $sql = "SELECT * FROM usuarios";
 $result = $conn->query($sql);
 
+// Si se añade un usuario
+if (isset($_POST['addUser'])) {
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $rol = $_POST['rol'];
+
+    $stmt = $conn->prepare("INSERT INTO usuarios (nombre, correo, rol) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $nombre, $correo, $rol);
+    $stmt->execute();
+    
+    header("Location: userList-view.php");
+    exit();
+}
+
 // Si se edita un usuario
 if (isset($_POST['editUser'])) {
     $id = $_POST['id'];
@@ -55,7 +69,42 @@ if (isset($_POST['deleteUser'])) {
     <section class="section">
         <div class="container">
             <h1 class="title">Gestión de Usuarios</h1>
-            
+
+            <!-- Formulario para añadir usuario -->
+            <div class="box">
+                <h2 class="title is-5">Añadir Nuevo Usuario</h2>
+                <form method="POST">
+                    <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control">
+                            <input class="input" type="text" name="nombre" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Correo</label>
+                        <div class="control">
+                            <input class="input" type="email" name="correo" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Rol</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="rol">
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Usuario">Usuario</option>
+                                    <option value="Asociado">Asociado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="button is-success" type="submit" name="addUser">Añadir Usuario</button>
+                </form>
+            </div>
+
             <input class="input" type="text" id="search" placeholder="Buscar usuario..." onkeyup="filterUsers()">
 
             <table class="table is-striped is-fullwidth">
