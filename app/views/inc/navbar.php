@@ -56,6 +56,7 @@
             <li>
                 <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-exchange-alt"></i> 
+                    <span>Movimientos</span>
                     <i class="fas fa-angle-down"></i> 
                 </a>
                 <ul class="collapse list-unstyled" id="submenu2">
